@@ -1,0 +1,28 @@
+#this folder is to automate the building and pushing of docker image to dockerhub
+
+name: Build Docker Image and Push to Docker Hub
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_push:
+    runs-on: ubuntu-latest
+
+steps:
+  - name: Checkout the code
+    uses: actions/checkout@v2
+
+  - name: Dockerhub Login
+    run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+
+  - name: Build Docker Image
+    run: docker build -t GCD:latest .
+  
+  - name: Push Docker Image to Dockerhub
+    run: docker push GCD:latest
