@@ -22,7 +22,7 @@ jobs:
       run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
     - name: Build Docker Image
-      run: docker build -t "gcd:latest" .
+      run: docker build -t "index:latest" ./fintechL3P1_showtell
   
     - name: Push Docker Image to Dockerhub
       run: docker push "gcd:latest"
