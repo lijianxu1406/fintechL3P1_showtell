@@ -22,7 +22,7 @@ jobs:
       run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
     - name: Build Docker Image
-      run: docker build -t "GCD:latest" .
+      run: docker build -t "gcd:latest" .
   
     - name: Push Docker Image to Dockerhub
-      run: docker push "GCD:latest"
+      run: docker push "gcd:latest"
