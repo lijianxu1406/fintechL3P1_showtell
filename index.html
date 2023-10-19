@@ -12,7 +12,7 @@
             padding: 0;
         }
         header {
-            background-color: #333;
+            background-color: #333333;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -35,24 +35,57 @@
     </header>
     <section>
         <h2>What is Greatest Common Divisor (GCD)?</h2>
-        <p>GCD is a mathematical concept used to find the largest positive integer that divides 2 or more numbers without leaving a remainder. It is the greatest number that can divide all of the given numbers evenly. It is also sometimes known as the "Greatest Common Factor" or "Highest Common Factor".</p>
+        <p>Greatest Common Divisor, aka GCD, is a mathematical concepts that refers to the largest postive integers that can divide 2 or more integers without remainder. It is sometimes known as the "Greatest Common Factor" or "Highest Common Factors"</p>
 
-        <h2>Applications in Mathematics</h2>
-        <p>GCD has various applications in mathematics, including simplifying fractions and solving diophantine equations. There are various methods to calculate the GCD, such as the Euclidean algorithm, which is widely used and efficient technique for finding the GCD of 2 numbers.</p>
+        <p> There are various methods to calculate GCD, such as prime factorization, Euclid's Algorithm, and Binary GCD algorithm. However, the most popular / well-known method for GCD will be the Euclidean Algorithm, derived from the Euclid's Algorithm.</p>
 
-        <h2>Benefits</h2>
-        <p>Some of the key benefits of additive manufacturing are:</p>
+        <h2>Euclidean Algorithm</h2>
+        <p> Euclidean Algorithm is more well-known than its parent counterpart due to its far superiority in efficiency when solving for the GCD of 2 integers.</p>
+        <p> The image below details the logic flow of the Euclidean Algorithm </p>
+
+        <img src="images/logicflow.png" alt="">
+
+        <h2>Applications in the field of Computing</h2>
+        <p> GCD has various applications in software engineering, particularly in algorithms and data structures. The following are a list of ways that GCD is used in software engineering. </p>
         <ul>
-            <li>Reduced material wastage</li>
-            <li>Customization and personalization</li>
-            <li>Shorter production lead times</li>
-            <li>Complex geometries achievable</li>
+            <li>Optimizing Algorithms </li>
+            <li>Random Number Generation</li>
+            <li>Parallel Prgramming</li>
+            <li>Data Structure</li>
+            <li>Error Detection and Correction</li>
+            <li>Graphics and Image Processing</li>
+            <li>Algorithms for Rational Numbers</li>
+            <li>Cryptography</li>
+            <li>Number Theory</li>
+            <li>Load Balancing</li>
+            <li>Resource Allocation</li>
         </ul>
 
-        <h2>Get Started</h2>
-        <p>If you're interested in learning more about additive manufacturing, consider exploring our resources and services.</p>
-
-        <a href="https://example.com" target="_blank">Learn More</a>
+        <h1>Try out this Greatest Common Divisor Calculator</h1>
+        <p>Enter two numbers to calculate their Greatest Common Divisor (GCD):</p>
+        <input type="number" id="num1" placeholder="Enter the first number">
+        <input type="number" id="num2" placeholder="Enter the second number">
+        <button onclick="calculateGCD()">Calculate GCD</button>
+        <p id="result"></p>
     </section>
+
+
+    <script>
+        function calculateGCD() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var result = document.getElementById("result");
+
+            // Function to calculate GCD using Euclidean Algorithm
+            function gcd(a, b) {
+                return b === 0 ? a : gcd(b, a % b);
+            }
+
+            var gcdResult = gcd(num1, num2);
+            result.textContent = "GCD: " + gcdResult;
+        }
+    </script>
+
+
 </body>
 </html>
