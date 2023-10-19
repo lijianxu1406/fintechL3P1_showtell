@@ -20,4 +20,4 @@ jobs:
         SLACK_TITLE: Post Title
         SLACK_USERNAME: BotCI
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_MESSAGE: "This is your custom message."
+        SLACK_MESSAGE: "Someone has commited a change and execute a push/pull-request. Please go to fintechL3P1_showtell repo to view proposed changes."
