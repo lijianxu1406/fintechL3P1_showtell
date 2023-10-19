@@ -11,7 +11,7 @@ on:
       - main
 
 jobs:
-  build_push:
+  build_and_push:
     runs-on: ubuntu-latest
 
     steps:
