@@ -18,11 +18,11 @@ jobs:
     - name: Checkout the code
       uses: actions/checkout@v2
 
-     - name: Dockerhub Login
+    - name: Dockerhub Login
       run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
-      - name: Build Docker Image
-        run: docker build -t "GCD:latest" .
+    - name: Build Docker Image
+      run: docker build -t "GCD:latest" .
   
-      - name: Push Docker Image to Dockerhub
-        run: docker push "GCD:latest"
+    - name: Push Docker Image to Dockerhub
+      run: docker push "GCD:latest"
