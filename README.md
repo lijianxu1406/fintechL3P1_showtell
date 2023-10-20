@@ -30,5 +30,8 @@ This exercise introduces the use of Github Secret in storing and encrypting priv
 ### 3. **Automation of Building and Pushing Docker Image to Dockerhub**
 Attempts to build and push docker image to dockerhub is currently facing some obstacles. Initial attempts ended in failure, mainly due to indentation issue in .yml file, as well as, lack of dockerfile before commencing on the workflow automation. 
 
+Example of error as shown:
+![errorexample](./images/errorexample.png)
 
-
+Moving forwards, I will attempt to automate the docker image build and push to dockerhub to complete a pipeline that automate the building and deployment of website to github pages and dockerhub whenever users make a git push / pull-request. 
+![futureworkflow](./images/futureworkflow.png)
