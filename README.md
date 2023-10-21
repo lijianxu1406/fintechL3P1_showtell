@@ -9,6 +9,7 @@ Project for Fintech L3 P1 show-tell presentation
 ![Current Workflow](./images/currentworkflow.png)
 
 To trigger the workflow, a simple website with a GCD calculator are built using html v5.0, css, and javascript. Changes made through Github push and pull request served as the trigger to kickstart the workflow. 
+Link: https://lijianxu1406.github.io/fintechL3P1_showtell/
 
 ### 1. **Deployment of Static Pages via Github Pages [static.yml]**
 From the course, static pages deployment can be achieved simply from Github Pages Tabs under Setting from Github.
