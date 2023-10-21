@@ -23,8 +23,9 @@ A git push / pull request will trigger the automatic deployment of static pages 
 Issue faced: If Github Pages are implemented before the creation of index.html file or lack of index.html file, the static page deployed will be based on the readme.md file. This can be rectify through the naming of the desired webpage-to-be-displayed to index.html. 
 
 ### 2. **Slack Notification on committed changes**
-![slack](./images/slack.png)
 A slack.yml are used to trigger a notification message to be sent to the owner’s slack upon commited change.
+![slack](./images/slack.png)
+Example of Slack Message
 ![notification](./images/notification.png)
 This exercise introduces the use of Github Secret in storing and encrypting privacy data that user do not wish to share to the public. At the same time, it provide exposure to the automation of notification used to trigger message to slack, whatapps via twilio, and telegram via botfather. Slack is used in this demonstration due to personal and security preferences.  
 
